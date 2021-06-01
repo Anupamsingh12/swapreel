@@ -1,0 +1,20 @@
+{% include 'navbar.html'%}
+
+
+
+  
+<h1 class='tc bg-light-red black'>Friends you may know</h1>
+
+<body>
+
+    {% for i in user %}
+  <div  class=" ma5 bg-light-green dib pa4 tc grow">
+      <img style ='width: 200px; height: 200px;'; src='https://joeschmoe.io/api/v1/{{i.first_name}}'/>
+      <h1 class='tc red hover-dark-green'>{{i.first_name}} {{i.last_name}}</h1>
+       <a class="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-green" href="#0">add</a>&nbsp&nbsp&nbsp
+       <a class="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-blue" href="#0">view</a>&nbsp&nbsp&nbsp
+       <a class="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-red" href="#0">skip</a>
+  </div>
+  {% endfor %}
+  
+</body>
